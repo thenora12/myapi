@@ -1,9 +1,9 @@
-# Dans myapp/models.py
+# models.py
 
 from django.db import models
 
 class Order(models.Model):
-    id = models.CharField(max_length=50, primary_key=True)  # Ajout de primary_key=True
+    id = models.CharField(max_length=50, primary_key=True)
     date_entree = models.DateField()
     date_livraison = models.DateField()
     note_livreur = models.IntegerField()
@@ -24,4 +24,3 @@ class Order(models.Model):
 
     def __str__(self):
         return f"Commande {self.id}"
-
